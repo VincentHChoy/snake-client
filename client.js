@@ -11,7 +11,19 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
+    // setInterval(()=>{
+    // console.log("Move: up")
+    // conn.write("Move: up");
+    // console.log("Move: left")
+    // conn.write("Move: left")
+    // },500)
+
+  });
+  
+  conn.on("connect", () => {
     console.log("Name:SNK")
+
+
   });
 
 
