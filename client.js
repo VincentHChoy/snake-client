@@ -10,26 +10,20 @@ const connect = function () {
     console.log("Successfully connected to game server")
   });
 
-  conn.on("connect", () => {
-    // setInterval(()=>{
-    // console.log("Move: up")
-    // conn.write("Move: up");
-    // console.log("Move: left")
-    // conn.write("Move: left")
-    // },500)
+  // conn.on("connect", () => {
+  //   // setInterval(()=>{
+  //   // console.log("Move: up")
+  //   // conn.write("Move: up");
+  //   // console.log("Move: left")
+  //   // conn.write("Move: left")
+  //   // },500)
 
-  });
+  // });
   
-  conn.on("connect", () => {
-    console.log("Name:SNK")
-
-
+  conn.on('connect', () => {
+    conn.write('Name: VC');
   });
 
-
-  conn.on('name', () => {
-    conn.write('Name:___');
-  });
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
